@@ -48,16 +48,6 @@
             align-items: center;
         }
         .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
-        
-        /* Item Image Thumbnail */
-        .item-image {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #333;
-            flex-shrink: 0;
-        }
 
         .item-details { flex-grow: 1; min-width: 0; }
         
@@ -119,16 +109,11 @@
             display: block;
         }
 
-        /* Mobile styling */
         @media (max-width: 500px) {
             .wishlist-item {
                 padding: 16px;
                 gap: 12px;
                 flex-wrap: wrap;
-            }
-            /* Hides small thumbnail on phones */
-            .item-image {
-                display: none;
             }
             .item-meta {
                 width: 100%;
@@ -149,7 +134,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">1</div>
-                <img src="images/bags.jpeg" alt="Bags" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Bags</div>
                     <div class="item-desc"><span class="accent-text">Colorful</span> and medium to large sized</div>
@@ -167,7 +151,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">2</div>
-                <img src="images/shoes.jpeg" alt="Shoes" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Shoes</div>
                     <div class="item-desc">Preferably with <span class="accent-text">minimal to no heel</span> (Size 6.5)</div>
@@ -185,7 +168,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">3</div>
-                <img src="images/clothes.jpeg" alt="Sweaters & Skirts" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Sweaters & Skirts</div>
                     <div class="item-desc"><span class="accent-text">Earthy, colorful, playful</span> style. Sweaters should be pullover (not open in the front)</div>
@@ -203,7 +185,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">4</div>
-                <img src="images/coats.jpeg" alt="Coats" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Coats</div>
                     <div class="item-desc"><span class="accent-text">Floral</span> and medium to long cut (remember I’m very short)</div>
@@ -221,7 +202,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">5</div>
-                <img src="images/jewelry.jpeg" alt="Jewelry" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Jewelry</div>
                     <div class="item-desc"><span class="accent-text">Earthy, colorful, and playful</span> style</div>
@@ -239,7 +219,6 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">6</div>
-                <img src="images/plant.jpeg" alt="Plant Pot" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Plant Pot</div>
                     <div class="item-desc">A <span class="accent-text">big pot</span> for my big plant</div>
