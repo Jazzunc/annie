@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annie's Wish List</title>
+    <title>Annie's List</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -48,6 +48,16 @@
             align-items: center;
         }
         .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
+        
+        /* Item Image Thumbnail */
+        .item-image {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #333;
+            flex-shrink: 0;
+        }
 
         .item-details { flex-grow: 1; min-width: 0; }
         
@@ -59,12 +69,13 @@
             margin-bottom: 4px;
         }
         
-        /* Line 2: Description / Preferences */
+        /* Line 2: Description with colorful accent */
         .item-desc {
             font-size: 0.9rem;
             color: #b0b0b0;
             line-height: 1.4;
         }
+        .accent-text { color: #ffab91; font-weight: 500; }
 
         /* Action Buttons */
         .item-meta {
@@ -89,7 +100,7 @@
             border-color: #d1b3ff;
         }
 
-        /* Expandable Mood Board Image Container */
+        /* Expandable Mood Board Image Container - Full Width Fit */
         .mood-board-expand {
             display: none;
             padding: 0 20px 20px 20px;
@@ -99,11 +110,13 @@
         }
         .mood-board-expand.active { display: block; }
         .mood-board-expand img {
-            max-width: 100%;
-            max-height: 500px;
+            width: 100%;
+            height: auto;
+            max-height: none;
             border-radius: 8px;
             margin-top: 16px;
             border: 1px solid #444;
+            display: block;
         }
 
         @media (max-width: 500px) {
@@ -111,6 +124,10 @@
                 padding: 16px;
                 gap: 12px;
                 flex-wrap: wrap;
+            }
+            .item-image {
+                width: 55px;
+                height: 55px;
             }
             .item-meta {
                 width: 100%;
@@ -122,7 +139,7 @@
 </head>
 <body>
 
-    <h1>Annie's Wish List</h1>
+    <h1>Annie's List</h1>
     <p class="subtitle">In order of preference</p>
 
     <div class="wishlist-container">
@@ -131,9 +148,10 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">1</div>
+                <img src="images/bags.jpeg" alt="Bags" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Bags</div>
-                    <div class="item-desc">Colorful and medium to large sized</div>
+                    <div class="item-desc"><span class="accent-text">Colorful</span> and medium to large sized</div>
                 </div>
                 <div class="item-meta">
                     <button class="mood-btn" onclick="toggleMood('mood-1')">Mood Board</button>
@@ -148,9 +166,10 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">2</div>
+                <img src="images/shoes.jpeg" alt="Shoes" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Shoes</div>
-                    <div class="item-desc">Preferably with minimal to no heel (Size 6.5)</div>
+                    <div class="item-desc">Preferably with <span class="accent-text">minimal to no heel</span> (Size 6.5)</div>
                 </div>
                 <div class="item-meta">
                     <button class="mood-btn" onclick="toggleMood('mood-2')">Mood Board</button>
@@ -165,9 +184,10 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">3</div>
+                <img src="images/clothes.jpeg" alt="Sweaters & Skirts" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Sweaters & Skirts</div>
-                    <div class="item-desc">Earthy, colorful, playful style. Sweaters should be pullover (not open in the front)</div>
+                    <div class="item-desc"><span class="accent-text">Earthy, colorful, playful</span> style. Sweaters should be pullover (not open in the front)</div>
                 </div>
                 <div class="item-meta">
                     <button class="mood-btn" onclick="toggleMood('mood-3')">Mood Board</button>
@@ -182,9 +202,10 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">4</div>
+                <img src="images/coats.jpeg" alt="Coats" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Coats</div>
-                    <div class="item-desc">Floral and medium to long cut (remember I’m very short)</div>
+                    <div class="item-desc"><span class="accent-text">Floral</span> and medium to long cut (remember I’m very short)</div>
                 </div>
                 <div class="item-meta">
                     <button class="mood-btn" onclick="toggleMood('mood-4')">Mood Board</button>
@@ -199,9 +220,10 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">5</div>
+                <img src="images/jewelry.jpeg" alt="Jewelry" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Jewelry</div>
-                    <div class="item-desc">Earthy, colorful, and playful style</div>
+                    <div class="item-desc"><span class="accent-text">Earthy, colorful, and playful</span> style</div>
                 </div>
                 <div class="item-meta">
                     <button class="mood-btn" onclick="toggleMood('mood-5')">Mood Board</button>
@@ -216,10 +238,17 @@
         <div class="wishlist-item-wrapper">
             <div class="wishlist-item">
                 <div class="rank">6</div>
+                <img src="images/plant.jpeg" alt="Plant Pot" class="item-image">
                 <div class="item-details">
                     <div class="item-title">Plant Pot</div>
-                    <div class="item-desc">A big pot for my big plant</div>
+                    <div class="item-desc">A <span class="accent-text">big pot</span> for my big plant</div>
                 </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-6')">Big Plant</button>
+                </div>
+            </div>
+            <div id="mood-6" class="mood-board-expand">
+                <img src="images/plant.jpeg" alt="Plant Pot Mood Board">
             </div>
         </div>
 
@@ -229,7 +258,7 @@
                 <div class="rank">7</div>
                 <div class="item-details">
                     <div class="item-title">D.O. – 'Dopamine' Album</div>
-                    <div class="item-desc">Music album release</div>
+                    <div class="item-desc"><span class="accent-text">Music album</span> release</div>
                 </div>
             </div>
         </div>
@@ -240,7 +269,7 @@
                 <div class="rank">8</div>
                 <div class="item-details">
                     <div class="item-title">Performance Tickets</div>
-                    <div class="item-desc">Tickets to a theatre or dance performance</div>
+                    <div class="item-desc">Tickets to a <span class="accent-text">theatre or dance</span> performance</div>
                 </div>
             </div>
         </div>
@@ -251,7 +280,7 @@
                 <div class="rank">9</div>
                 <div class="item-details">
                     <div class="item-title">Dish Set</div>
-                    <div class="item-desc">Pretty or fun colorful dish set (plates & bowls)</div>
+                    <div class="item-desc">Pretty or fun <span class="accent-text">colorful dish set</span> (plates & bowls)</div>
                 </div>
             </div>
         </div>
