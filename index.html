@@ -119,3 +119,185 @@
             width: 100%;
             height: auto;
             max-height: none;
+            border-radius: 8px;
+            margin-top: 16px;
+            border: 1px solid #444;
+            display: block;
+        }
+
+        @media (max-width: 500px) {
+            .wishlist-item {
+                padding: 16px;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .item-meta {
+                width: 100%;
+                justify-content: flex-end;
+                margin-top: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Annie's List</h1>
+    <p class="subtitle">In order of preference</p>
+
+    <div class="wishlist-container">
+
+        <!-- 1 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">1</div>
+                <div class="item-details">
+                    <div class="item-title">Bag</div>
+                    <div class="item-subtitle">A big fun color splash bag</div>
+                    <div class="item-desc">Colorful and medium to large sized</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-1')">Examples</button>
+                </div>
+            </div>
+            <div id="mood-1" class="mood-board-expand">
+                <img src="images/bags.jpeg" alt="Bags Mood Board">
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">2</div>
+                <div class="item-details">
+                    <div class="item-title">Shoes</div>
+                    <div class="item-subtitle">Size 6.5</div>
+                    <div class="item-desc">Preferably with minimal to no heel</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-2')">Examples</button>
+                </div>
+            </div>
+            <div id="mood-2" class="mood-board-expand">
+                <img src="images/shoes.jpeg" alt="Shoes Mood Board">
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">3</div>
+                <div class="item-details">
+                    <div class="item-title">Sweater or Skirt</div>
+                    <div class="item-subtitle">Earthy, colorful, playful style</div>
+                    <div class="item-desc">Sweaters should be pullover not open in the front</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-3')">Examples</button>
+                </div>
+            </div>
+            <div id="mood-3" class="mood-board-expand">
+                <img src="images/clothes.jpeg" alt="Sweaters & Skirts Mood Board">
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">4</div>
+                <div class="item-details">
+                    <div class="item-title">Coat</div>
+                    <div class="item-subtitle">Floral and medium to long cut</div>
+                    <div class="item-desc">Remember I’m very short</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-4')">Examples</button>
+                </div>
+            </div>
+            <div id="mood-4" class="mood-board-expand">
+                <img src="images/coats.jpeg" alt="Coats Mood Board">
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">5</div>
+                <div class="item-details">
+                    <div class="item-title">Jewelry</div>
+                    <div class="item-subtitle">Earthy, colorful, and playful style</div>
+                    <div class="item-desc">Necklaces, bracelets, earrings</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn" onclick="toggleMood('mood-5')">Examples</button>
+                </div>
+            </div>
+            <div id="mood-5" class="mood-board-expand">
+                <img src="images/jewelry.jpeg" alt="Jewelry Mood Board">
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">6</div>
+                <div class="item-details">
+                    <div class="item-title">Plant Pot</div>
+                    <div class="item-subtitle">A bigger pot for my big plant</div>
+                    <div class="item-desc">The current pot is 11" in diameter and 10" tall</div>
+                </div>
+                <div class="item-meta">
+                    <button class="mood-btn green-btn" onclick="toggleMood('mood-6')">Big Plant</button>
+                </div>
+            </div>
+            <div id="mood-6" class="mood-board-expand">
+                <img src="images/plant.jpeg" alt="Plant Pot Mood Board">
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">7</div>
+                <div class="item-details">
+                    <div class="item-title">D.O. – 'Dopamine' Album</div>
+                    <div class="item-subtitle">Either version</div>
+                    <div class="item-desc">Physical album release</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">8</div>
+                <div class="item-details">
+                    <div class="item-title">Performance Tickets</div>
+                    <div class="item-subtitle">See something new</div>
+                    <div class="item-desc">Tickets to a theatre or dance performance</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="wishlist-item-wrapper">
+            <div class="wishlist-item">
+                <div class="rank">9</div>
+                <div class="item-details">
+                    <div class="item-title">Dish Set</div>
+                    <div class="item-subtitle">Pretty or fun colorful dish set</div>
+                    <div class="item-desc">Plates and bowls</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMood(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
