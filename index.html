@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        h1 { text-align: center; color: #ffffff; margin-bottom: 12px; }
+        
+        /* Subtitle banner */
+        p.subtitle { 
+            text-align: center; 
+            color: #d0d0d0; 
+            font-size: 1.0rem; 
+            font-weight: 500;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            display: table;
+            margin: 0 auto 30px auto;
+            padding: 6px 16px;
+            border-radius: 20px;
+        }
+        
+        .wishlist-container { display: flex; flex-direction: column; gap: 16px; }
+        
+        .wishlist-item {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .wishlist-item:hover { border-color: #555; transform: translateY(-2px); }
+        .rank { font-size: 1.4rem; font-weight: bold; color: #888; min-width: 28px; text-align: center; line-height: 1.2; }
+        
+        /* Item Image Styling */
+        .item-image {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #333;
+            flex-shrink: 0;
+        }
+
+        .item-details { flex-grow: 1; min-width: 0; }
+        
+        /* Line 1: Title */
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        
+        /* Line 2: Description / Preferences */
+        .item-desc {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 500px) {
+            .wishlist-item {
+                padding: 16px;
+                gap: 12px;
+            }
+            .item-image {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wish List</h1>
+    <p class="subtitle">In order of preference</p>
+
+    <div class="wishlist-container">
+
+        <!-- 1 -->
+        <div class="wishlist-item">
+            <div class="rank">1</div>
+            <img src="images/bags.jpeg" alt="Bags" class="item-image">
+            <div class="item-details">
+                <div class="item-title">Bags</div>
+                <div class="item-desc">Colorful and medium to large sized</div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="wishlist-item">
+            <div class="rank">2</div>
+            <img src="images/shoes.jpeg" alt="Shoes" class="item-image">
+            <div class="item-details">
+                <div class="item-title">Shoes</div>
+                <div class="item-desc">Preferably with minimal to no heel (Size 6.5)</div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="wishlist-item">
+            <div class="rank">3</div>
+            <img src="images/clothes.jpeg" alt="Sweaters & Skirts" class="item-image">
+            <div class="item-details">
+                <div class="item-title">Sweaters & Skirts</div>
+                <div class="item-desc">Earthy, colorful, playful style. Sweaters should be pullover (not open in the front)</div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="wishlist-item">
+            <div class="rank">4</div>
+            <img src="images/coats.jpeg" alt="Coats" class="item-image">
+            <div class="item-details">
+                <div class="item-title">Coats</div>
+                <div class="item-desc">Floral and medium to long cut (remember I’m very short)</div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="wishlist-item">
+            <div class="rank">5</div>
+            <img src="images/jewelry.jpeg" alt="Jewelry" class="item-image">
+            <div class="item-details">
+                <div class="item-title">Jewelry</div>
+                <div class="item-desc">Earthy, colorful, and playful style</div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="wishlist-item">
+            <div class="rank">6</div>
+            <div class="item-details">
+                <div class="item-title">Plant Pot</div>
+                <div class="item-desc">A big pot for my big plant</div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="wishlist-item">
+            <div class="rank">7</div>
+            <div class="item-details">
+                <div class="item-title">D.O. – 'Dopamine' Album</div>
+                <div class="item-desc">Music album release</div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="wishlist-item">
+            <div class="rank">8</div>
+            <div class="item-details">
+                <div class="item-title">Performance Tickets</div>
+                <div class="item-desc">Tickets to a theatre or dance performance</div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="wishlist-item">
+            <div class="rank">9</div>
+            <div class="item-details">
+                <div class="item-title">Dish Set</div>
+                <div class="item-desc">Pretty or fun colorful dish set (plates & bowls)</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
