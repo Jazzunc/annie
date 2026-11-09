@@ -119,15 +119,16 @@
             display: block;
         }
 
+        /* Mobile styling */
         @media (max-width: 500px) {
             .wishlist-item {
                 padding: 16px;
                 gap: 12px;
                 flex-wrap: wrap;
             }
+            /* Hides small thumbnail on phones */
             .item-image {
-                width: 55px;
-                height: 55px;
+                display: none;
             }
             .item-meta {
                 width: 100%;
